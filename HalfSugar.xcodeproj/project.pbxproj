@@ -13,9 +13,12 @@
 		99E003181CFD5339004D725B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 99E003161CFD5339004D725B /* Main.storyboard */; };
 		99E0031A1CFD5339004D725B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 99E003191CFD5339004D725B /* Assets.xcassets */; };
 		99E0031D1CFD5339004D725B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 99E0031B1CFD5339004D725B /* LaunchScreen.storyboard */; };
+		F10255C5268FEA4D14798EA3 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 01B5D67685D1D81ECF4D4AD0 /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		01B5D67685D1D81ECF4D4AD0 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		352996382D56BE1A7FEFFFF7 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		99E0030A1CFD5339004D725B /* HalfSugar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HalfSugar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		99E0030E1CFD5339004D725B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		99E003101CFD5339004D725B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -26,6 +29,7 @@
 		99E003191CFD5339004D725B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		99E0031C1CFD5339004D725B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		99E0031E1CFD5339004D725B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E7472F3D7921D0FE771164AD /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,17 +37,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F10255C5268FEA4D14798EA3 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5A527F42143B5C078D3CDD73 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				01B5D67685D1D81ECF4D4AD0 /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		99E003011CFD5339004D725B = {
 			isa = PBXGroup;
 			children = (
 				99E0030C1CFD5339004D725B /* HalfSugar */,
 				99E0030B1CFD5339004D725B /* Products */,
+				AB0697E7AC7E4D9104188994 /* Pods */,
+				5A527F42143B5C078D3CDD73 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -79,6 +94,15 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		AB0697E7AC7E4D9104188994 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E7472F3D7921D0FE771164AD /* Pods.debug.xcconfig */,
+				352996382D56BE1A7FEFFFF7 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -86,9 +110,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 99E003211CFD5339004D725B /* Build configuration list for PBXNativeTarget "HalfSugar" */;
 			buildPhases = (
+				2294F45C87C3FEB53B90A9D4 /* Check Pods Manifest.lock */,
 				99E003061CFD5339004D725B /* Sources */,
 				99E003071CFD5339004D725B /* Frameworks */,
 				99E003081CFD5339004D725B /* Resources */,
+				8D2965A0A36E5C387BA31AF5 /* Embed Pods Frameworks */,
+				0C679107F048063AEB0A03A5 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -143,6 +170,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0C679107F048063AEB0A03A5 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2294F45C87C3FEB53B90A9D4 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		8D2965A0A36E5C387BA31AF5 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		99E003061CFD5339004D725B /* Sources */ = {
@@ -261,6 +336,7 @@
 		};
 		99E003221CFD5339004D725B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E7472F3D7921D0FE771164AD /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = HalfSugar/Info.plist;
@@ -272,6 +348,7 @@
 		};
 		99E003231CFD5339004D725B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 352996382D56BE1A7FEFFFF7 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = HalfSugar/Info.plist;
@@ -300,6 +377,7 @@
 				99E003231CFD5339004D725B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
